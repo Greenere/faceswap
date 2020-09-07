@@ -10,6 +10,8 @@ For better methods/algorithms/implementations of face swap, you may check:
 - https://github.com/MarekKowalski/FaceSwap
 - https://github.com/shaoanlu/faceswap-GAN
 
+But if you just want to go through a complete process, this will be a project simple enough to understand the internal mechanism.
+
 ## Preface
 
 This is purely a graduate design. There are many faults in the pipeline that you may improve, but I do not suggest. A fine tuned face swap method will be a severe threat as far as I can see, so this is just for research and entertainment. 
@@ -32,7 +34,7 @@ The results are acquired on the Celeb-DF dataset (http://www.cs.albany.edu/~lsw/
 
 ### Face swap performance
 
-<img width=80% src="imgs/faceswaps.png"/>
+<center><img width=80% src="imgs/faceswaps.png"/></center>
 
 The solid line connects faces with same gesture, the dotted line connects faces with same identity. The performance of this algorithm I adopted is limited as you can see.
 
