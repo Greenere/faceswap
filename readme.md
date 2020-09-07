@@ -2,6 +2,14 @@
 
 This is my graduate design for bachelor degree. The main focus will be the implementation of a complete pipeline of face swap (or deepfake generation) rather than innovations. 
 
+The capability of this pipeline is very limited. It cannot cope with drastic gestures, tiny region of interests, inappropriate light, etc.
+
+For better methods/algorithms/implementations of face swap, you may check:
+
+- https://github.com/deepfakes/faceswap
+- https://github.com/MarekKowalski/FaceSwap
+- https://github.com/shaoanlu/faceswap-GAN
+
 ## Preface
 
 This is purely a graduate design. There are many faults in the pipeline that you may improve, but I do not suggest. A fine tuned face swap method will be a severe threat as far as I can see, so this is just for research and entertainment. 
