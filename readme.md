@@ -34,7 +34,7 @@ The results are acquired on the Celeb-DF dataset (http://www.cs.albany.edu/~lsw/
 
 ### Face swap performance
 
-<center><img width=80% src="imgs/faceswaps.png"/></center>
+<img width=80% src="imgs/faceswaps.png" style="float:center"/>
 
 The solid line connects faces with same gesture, the dotted line connects faces with same identity. The performance of this algorithm I adopted is limited as you can see.
 
@@ -52,11 +52,12 @@ There are two major faults:
         <td>Deepfake generated</td>
     </tr>
     <tr>
-        <td><img width=60% src="imgs/id1-4.gif"/></td>
-        <td><img width=60% src="imgs/id19-1.gif"/></td>
-        <td><img src="imgs/id1-id19-4-1.gif"/></td>
+        <td><img width=60% src="imgs/id1-4.gif" style="float:center"/></td>
+        <td><img width=60% src="imgs/id19-1.gif" style="float:center"/></td>
+        <td><img src="imgs/id1-id19-4-1.gif" style="float:center"/></td>
     </tr>
 </table>
+
 
 The problem is very obvious. The pipeline only tampered the core zone of human face (eyes, nose, mouse, chicks, etc.). After color correction, the tampered zone become subtle in the background, making the generated deepfake not that fake.
 
@@ -64,7 +65,7 @@ But this problem comes from the mechanism of the generating process I adopted, i
 
 ## Algorithm
 
-<img width=80% src="imgs/skeleton.png"/>
+<img width=80% src="imgs/skeleton.png" style="float:center"/>
 
 Since the major concern is face swapping, I adopted a public version of  MTCCN for face detection (https://github.com/imistyrain/MTCNN). 
 
@@ -79,7 +80,7 @@ The last two modules will be the major works:
 
 ### Intracoder
 
-<img width=80% src="imgs/intracoder.png"/>
+<img width=100% src="imgs/intracoder.png" style="float:center"/>
 
 The "intracoder" is a pair of autoencoders trained and used with swapped decoder. I adopt the most common structure of stacked convolutional layers. 
 
@@ -89,7 +90,7 @@ The desire to change identity while sustain gesture means to sustain abstract pa
 
 ### Color correction
 
-<img width=80% src="imgs/colorcorrection.png"/>
+<img width=100% src="imgs/colorcorrection.png" style="float:center"/>
 
 The module of color correction has two functions:
 
