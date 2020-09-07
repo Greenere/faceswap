@@ -14,7 +14,17 @@ For better methods/algorithms/implementations of face swap, you may check:
 
 This is purely a graduate design. There are many faults in the pipeline that you may improve, but I do not suggest. A fine tuned face swap method will be a severe threat as far as I can see, so this is just for research and entertainment. 
 
-`If it is adopted for illegal purpose (although I doubt the possiblity), I will not take any responsibility for it. `
+***If it is adopted for illegal purpose (although I doubt the possiblity), I will not take any responsibility for it.*** 
+
+You can run it by
+
+```shell
+python faceSwapPipeline.py
+```
+
+The generated video can be found in `datasets/generated`
+
+You can check the process through `swap.log` in `logs`
 
 ## Results
 
