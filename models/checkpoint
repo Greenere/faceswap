@@ -1,0 +1,2 @@
+model_checkpoint_path: "ccdec"
+all_model_checkpoint_paths: "ccdec"
