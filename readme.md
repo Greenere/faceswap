@@ -45,15 +45,19 @@ There are two major faults:
 
 ### Deepfake performance
 
-<p text-align="center">
-    <figure>
-        <img width=23% src="imgs/id1-4.gif" title="Gesture donator"/>
-        <img width=51% src="imgs/id19-1.gif" title="Identity donator"/>
-        <img width=23% src="imgs/id1-id19-4-1.gif" title="Deepfake generated"/>
-    </figure>
-</p>
+<table>
+<tr>
+<td align="right"><img width=65% src="imgs/id1-4.gif" title="Gesture donator"/></td>
+<td align="center"><img width=100% src="imgs/id19-1.gif" title="Identity donator"/></td>
+<td align="left"><img width=65% src="imgs/id1-id19-4-1.gif" title="Deepfake generated"/></td>
+</tr>
+<tr>
+<td width=25% align="right">Gesture donator</td>
+<td width=35% align="center">Identity donator</td>
+<td width=25% align="left">Deepfake generated</td>
+</tr>
+</table>
 
-*From left to right: Gesture donator, Identity donator and Deepfake generated*
 
 The problem is very obvious. The pipeline only tampered the core zone of human face (eyes, nose, mouse, chicks, etc.). After color correction, the tampered zone become subtle in the background, making the generated deepfake not that fake.
 
@@ -63,9 +67,13 @@ But this problem comes from the mechanism of the generating process I adopted, i
 
 <img width=100% src="imgs/skeleton.png" style="float:center"/>
 
-Since the major concern is face swapping, I adopted a public version of  MTCCN for face detection (https://github.com/imistyrain/MTCNN). 
+Since the major concern is face swapping, I adopted a public version of  MTCCN for face detection:
 
-For the alignment and de-alignment of face, I adopted the reference points and methods publicly mentioned in zhihu (https://zhuanlan.zhihu.com/p/61343643).
+> MTCNN: https://github.com/imistyrain/MTCNN
+
+For the alignment and de-alignment of face, I adopted the reference points and methods publicly mentioned in zhihu:
+
+> 从零开始搭建人脸识别系统（二）：人脸对齐: https://zhuanlan.zhihu.com/p/61343643
 
 For the fusion of images, the blending of foreground and background, I configured the classical Poisson Image Blending for my own purpose.
 
