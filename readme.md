@@ -1,6 +1,6 @@
 # Faceswap
 
-This is my graduate design for bachelor degree. The main focus will be the implementation of a complete pipeline of face swap (or deepfake generation) rather than innovations. 
+This is my graduate design for bachelor degree. The main focus is the implementation of a complete pipeline of face swap (or deepfake generation) rather than innovations. 
 
 The capability of this pipeline is very limited. It cannot cope with drastic gestures, tiny region of interests, inappropriate light, etc.
 
@@ -34,7 +34,7 @@ The results are acquired on the Celeb-DF dataset (http://www.cs.albany.edu/~lsw/
 
 ### Face swap performance
 
-<p text-align="center"><img width=90% src="imgs/faceswaps.png"/></p>
+<img width=100% src="imgs/faceswaps.png"></img>
 
 The solid line connects faces with same gesture, the dotted line connects faces with same identity. The performance of this algorithm I adopted is limited as you can see.
 
@@ -63,7 +63,9 @@ The problem is very obvious. The pipeline only tampered the core zone of human f
 
 But this problem comes from the mechanism of the generating process I adopted, it appears in other methods with the same mechanism too.
 
-## Algorithm
+## Method
+
+
 
 <img width=100% src="imgs/skeleton.png" style="float:center"/>
 
@@ -86,7 +88,7 @@ The last two modules will be the major works:
 
 <img width=100% src="imgs/intracoder.png" style="float:center"/>
 
-The "intracoder" is a pair of autoencoders trained and used with swapped decoder. I adopt the most common structure of stacked convolutional layers. 
+The "intracoder" is a pair of autoencoders trained and used with swapped decoder. I adopt the most common structure of stacked convolutional layers[^1]. 
 
 The shared encoder is deeper than seperate decoder as shown. It's designed under the presumption that the deep layer contains more abstract information of input and shallow layer contains more concrete information of input.
 
@@ -113,3 +115,7 @@ But in my scenario, I also wish to upsample the generated faces so that I could 
 
  I believe that this techique can be adopted for good purpose and Disneyland has made its effort. If utilized properly, this could be a revolution for movie factory and other related infustries.
 
+****
+
+
+[^1]: The exact design of architecture is not very crucial.
